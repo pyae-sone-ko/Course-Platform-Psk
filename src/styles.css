@@ -1,0 +1,139 @@
+:root{
+  --sky-100: #e6f7ff;
+  --sky-200: #cceeff;
+  --sky-400: #66c2ff;
+  --sky-600: #1ea4ff;
+  --text: #0b2540;
+  --card-bg: #ffffff;
+  --radius: 12px;
+  --shadow: 0 6px 18px rgba(16,40,68,0.08);
+}
+
+/* Reset */
+*{box-sizing:border-box}
+html,body,#root{height:100%;margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+body{background:linear-gradient(180deg,var(--sky-100),#fbfdff);color:var(--text);}
+
+/* Header */
+.header{
+   background: linear-gradient(90deg, #009ffd, #2a2a72);
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.brand{
+  margin:0;
+  color: #ffffff;;
+  font-weight:700;
+  font-size:1.25rem;
+}
+
+/* Search */
+.search-wrap{
+  margin-left:auto;
+  display:flex;
+  align-items:center;
+  background:rgba(255,255,255,0.9);
+  padding:8px 12px;
+  border-radius:999px;
+  border:1px solid rgba(30,164,255,0.12);
+  box-shadow:var(--shadow);
+  width:360px;
+}
+.search-icon{color:var(--sky-600);margin-right:8px}
+.search-input{
+  border:0;outline:none;background:transparent;font-size:1rem;width:100%;
+}
+
+/* main */
+.main{padding:24px;max-width:1200px;margin:0 auto}
+
+/* sectiontitle */
+.section-title{margin:0 0 12px 6px;color:var(--sky-600)}
+
+/* grid */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:18px;
+}
+
+/* card */
+.card{
+  background:var(--card-bg);
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  cursor:pointer;
+  transform: translateZ(0);
+  transition: transform 140ms cubic-bezier(.2,.9,.3,1), box-shadow 140ms;
+  display:flex;
+  flex-direction:column;
+}
+.card:hover{
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 14px 30px rgba(16,40,68,0.12);
+}
+.card-img-wrap{height:150px;overflow:hidden}
+.card-img{width:100%;height:100%;object-fit:cover;display:block;}
+
+/* card body */
+.card-body{padding:12px}
+.card-title{margin:0 0 6px 0;font-size:1.05rem}
+.card-teacher{margin:0;color:#6b7e8f;font-size:0.9rem}
+.card-short{margin-top:8px;color:#546b7a;font-size:0.9rem}
+
+/* sentinel */
+.sentinel-wrap{text-align:center;padding:18px;color:#6b7e8f}
+
+/* course detail */
+.course-detail .back-btn{
+  background:transparent;border:0;color:var(--sky-600);cursor:pointer;font-size:0.95rem;margin-bottom:12px;
+  display:inline-flex;align-items:center;gap:8px;
+}
+.player-wrap{display:flex;gap:20px;align-items:flex-start}
+
+/* left and right */
+.left{flex:1;min-width:0}
+.right{width:340px}
+
+/* card-rounded style */
+.card-rounded{background:var(--card-bg);padding:14px;border-radius:14px;box-shadow:var(--shadow);margin-top:12px}
+
+/* video player */
+.video-player .iframe-wrap{position:relative;padding-top:56.25%;background:#000;border-radius:10px;overflow:hidden}
+.video-player iframe{position:absolute;left:0;top:0;width:100%;height:100%}
+.player-title{margin-top:10px;font-weight:600}
+
+/* bullets */
+.bullets{margin:10px 0 0 16px;padding:0;color:#334a5a}
+
+/* playlist */
+.playlist h3{margin:0 0 12px 0}
+.playlist-item{display:flex;gap:10px;padding:8px;align-items:center;border-radius:10px;cursor:pointer;transition:background 120ms, transform 120ms}
+.playlist-item:hover{background:var(--sky-100);transform:translateX(4px)}
+.playlist-item.active{background:linear-gradient(90deg,var(--sky-100),#fffbe6);border-left:4px solid var(--sky-600)}
+.thumb img{width:110px;height:62px;object-fit:cover;border-radius:6px}
+.meta .title{font-weight:600}
+.meta .len{font-size:0.85rem;color:#607a86}
+
+/* responsive */
+@media (max-width:980px){
+  .player-wrap{flex-direction:column}
+  .right{width:100%}
+}
+
+/* tooltip - use title attribute visually enhanced on hover (native will show) */
+/* small helpers */
+.small-meta{color:#6b7782;font-size:0.9rem;margin-top:4px}
+
+/* playlist scrollbar */
+.playlist{max-height:60vh;overflow:auto;padding-right:6px}
+.playlist::-webkit-scrollbar{width:8px}
+.playlist::-webkit-scrollbar-thumb{background:rgba(0,0,0,0.08);border-radius:6px}
+
+/* small footer */
+.footer{text-align:center;padding:18px;color:#6b7e8f}
