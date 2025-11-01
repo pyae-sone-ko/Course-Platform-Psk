@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+# Course-Platform-Psk
+Course Platform by PSK is a modern and user-friendly React.js app inspired by Coursera. It features a sky-blue theme, course search, lazy loading, and a YouTube-style video player with tooltips and hover animations—offering a smooth, engaging, and beautifully designed learning experience.
+>>>>>>> e389ebb58f489f46f99ad1e71a6db30386e80ce9
